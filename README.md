@@ -1,5 +1,6 @@
 # EDA_Suicide_Bombing_Attacks_Pyhton
-###  Pakistan Suicide Bombing Attacks - Exploratory Data Analysis (EDA)
+
+### Pakistan Suicide Bombing Attacks - Exploratory Data Analysis (EDA)
 
 This repository contains the Exploratory Data Analysis (EDA) of the "Pakistan Suicide Bombing Attacks" dataset. The aim of this project is to uncover trends, explore patterns, and provide insights for security policies, preventive measures, peacekeeping, and counter-terrorism strategies.
 
@@ -22,6 +23,7 @@ The dataset used in this project contains information about suicide bombing atta
 - `Suicide_bombing_attacks.csv`: The dataset file.
 - `Suicide_bombing_attacks.ipynb`: The Python script for performing EDA and training the model.
 - `suicide_bombing_attacks_map.html`: An interactive map showing the locations of the attacks.
+- `suicide_bombing_severity_predictor.pkl`: The trained model file.
 - `README.md`: This file.
 
 ## Requirements
@@ -45,23 +47,34 @@ The dataset used in this project contains information about suicide bombing atta
     ```bash
     pip install pandas seaborn matplotlib folium scikit-learn
     ```
-3. To load the trained model from the `.pkl` file:
-    ```python
-    import pickle
 
-    with open('model.pkl', 'rb') as file:
-        model = pickle.load(file)
-    ```
 ## Usage
 
 1. Run the analysis script:
     ```bash
-    python Suicide_bombing_attacks.ipynb
+    jupyter notebook Suicide_bombing_attacks.ipynb
     ```
 
 2. Open the interactive map:
     ```bash
     open suicide_bombing_attacks_map.html
+    ```
+
+3. Load the trained model from the `.pkl` file and make predictions:
+    ```python
+    import pickle
+
+    # Load the model from the .pkl file
+    with open('suicide_bombing_severity_predictor.pkl', 'rb') as file:
+        model = pickle.load(file)
+
+    # Example input data (replace with your actual data)
+    input_data = [[1, 2, 3, 4, 5, 6, 7, 8]]  # Replace with actual feature values
+
+    # Make predictions
+    predictions = model.predict(input_data)
+
+    print(predictions)
     ```
 
 ## Exploratory Data Analysis
@@ -100,10 +113,10 @@ This project is licensed under the MIT License.
 
 ## Acknowledgements
 
-- Performed Interne At CodexCue!
+- Performed Internship at CodexCue!
+
 ## Contact
 
 For any questions or inquiries, please contact:
 - Your Name: [marymughal216@gmail.com]
-- GitHub: [MaryamTraiq-1]
-
+- GitHub: [MaryamTariq-1]
