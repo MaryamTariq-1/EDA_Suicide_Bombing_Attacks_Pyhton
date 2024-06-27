@@ -45,7 +45,13 @@ The dataset used in this project contains information about suicide bombing atta
     ```bash
     pip install pandas seaborn matplotlib folium scikit-learn
     ```
+3. To load the trained model from the `.pkl` file:
+    ```python
+    import pickle
 
+    with open('model.pkl', 'rb') as file:
+        model = pickle.load(file)
+    ```
 ## Usage
 
 1. Run the analysis script:
